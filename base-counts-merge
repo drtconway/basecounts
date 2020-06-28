@@ -1,0 +1,6 @@
+#!/bin/bash
+
+out="$1"
+shift
+
+pypy3 /scripts/base-counts-merge.py $@ | gzip -9 - > ${out}

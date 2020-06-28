@@ -1,0 +1,3 @@
+#!/bin/bash
+
+samtools mpileup $1 | pypy3 /scripts/base-counts-count.py | gzip -9 - > $2
